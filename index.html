@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Dropdown menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-AlmostWhite">
+    <div>
+        <nav id="navbar" class="flex flex-row justify-between px-5 py-5 mx-auto xl:px-20 xl:py-5 relative">
+            <!-- Desktop menu -->
+            <div class="relative w-[95%] mx-auto flex justify-start items-center">
+                <div class="bg-AlmostWhite shadow-md rounded-xl w-40 h-36 absolute top-8 left-28 p-4 hidden transition duration-300"
+                    id="featuresDropdownMenu">
+                    <div class="flex flex-col justify-between space-y-2">
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <img src="./images/icon-todo.svg" alt="">
+                            <p class="text-MediumGray cursor-pointer">Todo List</p>
+                        </div>
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <img src="./images/icon-calendar.svg" alt="">
+                            <p class="text-MediumGray cursor-pointer">Calendar</p>
+                        </div>
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <img src="./images/icon-reminders.svg" alt="">
+                            <p class="text-MediumGray cursor-pointer">Reminders</p>
+                        </div>
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <img src="./images/icon-planning.svg" alt="">
+                            <p class="text-MediumGray cursor-pointer">Planning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-AlmostWhite shadow-md rounded-xl w-32 h-28 absolute top-8 left-72 p-4 hidden transition duration-300"
+                    id="companyDropdownMenu">
+                    <div class="flex flex-col space-y-2">
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <p class="text-MediumGray cursor-pointer">History</p>
+                        </div>
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <p class="text-MediumGray cursor-pointer">Our Team</p>
+                        </div>
+                        <div class="flex flex-row justify-start items-center space-x-4">
+                            <p class="text-MediumGray cursor-pointer">Blog</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/logo.svg" alt="" class="mr-20">
+                <ul
+                    class="hidden xl:flex xl:flex-row xl:items-center xl:space-x-10 text-MediumGray hover:text-AlmostBlack duration-200">
+                    <li><a href="#"
+                            class="flex justify-between items-center text-lg  hover:text-AlmostBlack duration-200">Features
+                            <span class="ml-2"><img src="./images/icon-arrow-down.svg" alt="" id="features"></span></a>
+                    </li>
+
+                    <li><a href="#"
+                            class="flex justify-between items-center text-lg  hover:text-AlmostBlack duration-200">Company
+                            <span class="ml-2"><img src="./images/icon-arrow-down.svg" alt="" id="company"></span></a>
+                    </li>
+                    <li><a href="#"
+                            class="flex justify-between items-center text-lg  hover:text-AlmostBlack duration-200">Careers</a>
+                    </li>
+                    <li><a href="#"
+                            class="flex justify-between items-center text-lg  hover:text-AlmostBlack duration-200">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="xl:flex xl:justify-center xl:items-center xl:space-x-8">
+                <a href="" class="text-lg text-MediumGray hidden xl:flex  hover:text-AlmostBlack duration-200">Login</a>
+                <div
+                    class="hidden xl:flex justify-center items-center border-2 text-base text-MediumGray px-5 py-2 border-MediumGray rounded-2xl cursor-pointer hover:text-AlmostWhite hover:border-AlmostBlack duration-200  hover:bg-AlmostBlack ">
+                    Register
+                </div>
+                <!-- Desktop menu -->
+
+                <!-- Mobile menu hamburger btn -->
+                <div id="hamburger" class="xl:hidden sm:flex w-10 h-4 cursor-pointer">
+                    <img src="./images/icon-menu.svg" alt="">
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="bg-AlmostWhite w-[70%] h-screen absolute top-0 right-0 p-10 hidden xl:hidden transition-all duration-300"
+                id="mobileMenu">
+                <!-- Close button -->
+                <img src="./images/icon-close-menu.svg" alt="" class="absolute top-5 right-8 cursor-pointer"
+                    id="closeMenu">
+                <!-- Close button -->
+                <ul class="xl:hidden flex flex-col space-y-6 mt-10 text-MediumGray hover:text-AlmostBlack duration-200">
+                    <li><a href="#"
+                            class="flex justify-between items-center text-md hover:text-AlmostBlack duration-200">Features
+                            <span class="ml-2"><img src="./images/icon-arrow-down.svg" alt=""
+                                    id="mobileMenuFeaturesDropdown"></span></a>
+                        <div class="hidden flex-col justify-between space-y-2 ps-4 mt-2" id="mobileMenuFeatures">
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <img src="./images/icon-todo.svg" alt="">
+                                <p class="text-MediumGray cursor-pointer">Todo List</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <img src="./images/icon-calendar.svg" alt="">
+                                <p class="text-MediumGray cursor-pointer">Calendar</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <img src="./images/icon-reminders.svg" alt="">
+                                <p class="text-MediumGray cursor-pointer">Reminders</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <img src="./images/icon-planning.svg" alt="">
+                                <p class="text-MediumGray cursor-pointer">Planning</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="#"
+                            class="flex justify-between items-center text-md  hover:text-AlmostBlack duration-200">Company
+                            <span class="ml-2"><img src="./images/icon-arrow-down.svg" alt=""
+                                    id="mobileMenuCompanyDropdown"></span></a>
+                        <div class="hidden flex-col space-y-2 ps-4 mt-2" id="mobileMenuCompany">
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <p class="text-MediumGray cursor-pointer">History</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <p class="text-MediumGray cursor-pointer">Our Team</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center space-x-4">
+                                <p class="text-MediumGray cursor-pointer">Blog</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#"
+                            class="flex justify-between items-center text-md  hover:text-AlmostBlack duration-200">Careers</a>
+                    </li>
+                    <li><a href="#"
+                            class="flex justify-between items-center text-md  hover:text-AlmostBlack duration-200">About</a>
+                    </li>
+                </ul>
+                <div class="flex flex-col  items-center space-y-6 mt-10">
+                    <a href="#"
+                        class="text-md text-MediumGray flex text-center  hover:text-AlmostBlack duration-200">Login</a>
+                    <div
+                        class="flex justify-center items-center border-2 text-sm px-10 py-2 border-MediumGray rounded-2xl cursor-pointer hover:text-AlmostWhite hover:border-AlmostBlack duration-200  hover:bg-AlmostBlack ">
+                        Register
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+
+        </nav>
+
+        <section id="main">
+            <div
+                class="flex flex-col-reverse items-center w-full xl:w-[80%] xl:h-[85vh] xl:flex-row xl:justify-between xl:mt-6 xl:mx-auto xl:px-10">
+                <div class="xl:flex xl:flex-col xl:justify-between xl:w-1/2">
+                    <div
+                        class="flex flex-col justify-center items-center text-center space-y-10 xl:justify-between xl:items-start xl:space-x-0 xl:space-y-12">
+                        <h2 class="font-extrabold text-3xl xl:text-[60px] xl:text-start leading-[4rem]">Make remote work
+                        </h2>
+                        <p class="w-3/4 mx-auto text-MediumGray xl:text-start xl:text-xl">Get your team in sync, no
+                            matter your location. Streamline
+                            processes, create team rituals, and watch productivity soar.</p>
+                        <div
+                            class="w-2/3 mx-auto px-2 py-3 text-lg font-bold bg-AlmostBlack text-AlmostWhite border-2 border-AlmostBlack rounded-2xl cursor-pointer xl:w-1/3 hover:bg-AlmostWhite hover:text-AlmostBlack duration-200">
+                            Learn more
+                        </div>
+                        <div
+                            class="xl:w-full xl:justify-start w-full flex flex-row justify-center space-x-10 pb-4 px-4 mt-6">
+                            <img src="./images/client-databiz.svg" alt="" class="w-10 xl:w-20 xl:h-5">
+                            <img src="./images/client-audiophile.svg" alt="" class="w-10 xl:w-20 xl:h-5">
+                            <img src="./images/client-meet.svg" alt="" class="w-10 xl:w-20 xl:h-5">
+                            <img src="./images/client-maker.svg" alt="" class="w-10 xl:w-20 xl:h-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xl:hidden flex w-full">
+                    <img src="./images/image-hero-mobile.png" alt="" class="w-full">
+                </div>
+                <div class="hidden xl:flex xl:h-[70vh] xl:w-1/2">
+                    <img src="./images/image-hero-desktop.png" alt="" class="xl:w-full">
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
